@@ -12,14 +12,16 @@ function DataTable() {
     setData([...data, { x: 0, y: 0 }])
   }
 
-  const deleteRow = () => {
-    
+  const deleteRow = (index: number) => {
+    const updatedData = data.filter((_, rowIndex) => rowIndex !== index)
+setData(updatedData)
+   
   }
   
   function handleInputChange(index: number, field: "x" | "y", value: string) {
-    const newData = [...data]
-    newData[index][field] = Number(value)
-    setData(newData)
+    const updatedData = [...data]
+    updatedData[index][field] = Number(value)
+    setData(updatedData)
   }
 
   return (
@@ -39,7 +41,7 @@ function DataTable() {
               Y Value
             </th>
 
-            <th className="boreder p-2 bg-gray-100"> Actions </th>
+            <th className="border p-2 bg-gray-100"> Actions </th>
           </tr>
           
         </thead>
@@ -63,6 +65,15 @@ function DataTable() {
                   value={row.y}
                   onChange={(e) => handleInputChange(index, "y", e.target.value)}
                 />
+              </td>
+
+              <td className="border p-2">
+                <button
+                  className="px-2 py-1 bg-red-300 text-white rounded hover:bg-red-600"
+                  onClick={() => deleteRow(index)}
+                >
+                  Delete
+                </button>
               </td>
 
             </tr>
