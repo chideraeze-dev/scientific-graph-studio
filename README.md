@@ -69,7 +69,7 @@ The primary goals of Scientific Graph Studio are to:
 
 - React
 - TypeScript
-- React + TypeScript (Vite)
+- Vite
 - Tailwind CSS
 - Plotly.js
 

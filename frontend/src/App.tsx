@@ -8,9 +8,7 @@ function App() {
       <Header />
 
       <main className="p-8">
-        <h2 className="text-2xl font-bold">
           <Workspace />
-        </h2>
       </main>
       <Footer />
     </div>
