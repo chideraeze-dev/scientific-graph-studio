@@ -11,6 +11,10 @@ function DataTable() {
   const addRow = () => {
     setData([...data, { x: 0, y: 0 }])
   }
+
+  const deleteRow = () => {
+    
+  }
   
   function handleInputChange(index: number, field: "x" | "y", value: string) {
     const newData = [...data]
@@ -34,7 +38,10 @@ function DataTable() {
             <th className="border p-2 bg-gray-100">
               Y Value
             </th>
+
+            <th className="boreder p-2 bg-gray-100"> Actions </th>
           </tr>
+          
         </thead>
 
         <tbody>
