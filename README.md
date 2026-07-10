@@ -1,6 +1,6 @@
 ## Project Status
 
-**Currently in Active Development (Version 1.0 MVP)**
+**Currently in Active Development **
 
 # Scientific Graph Studio
 
